@@ -46,9 +46,10 @@ Route::get('/', function () {
 
 
 
-// exercise 
-//https://code.tutsplus.com/tutorials/how-laravel-broadcasting-works--cms-30500
-
+// BROADCAST with PUSHER
+// https://code.tutsplus.com/tutorials/how-laravel-broadcasting-works--cms-30500
+Route::get('message/index', 'MessageController@index');
+Route::get('message/send', 'MessageController@send');
 
 
 
