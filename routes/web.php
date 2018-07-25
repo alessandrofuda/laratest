@@ -92,3 +92,7 @@ Route::group(['middleware' => 'auth'], function () {
 // webhooks --> ricevono notifiche from braintree
 Route::post('braintree/webhooks', '\Laravel\Cashier\Http\Controllers\WebhookController@handleWebhook');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
