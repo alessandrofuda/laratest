@@ -248,3 +248,19 @@ function xphp() {
 
     if ! $XDEBUG_ENABLED; then xoff; fi
 }
+
+
+
+
+
+## Bash cmd Alias: 1 cmd for 3: GIT add,commit,push -- 25/07/2018 ##
+#
+#
+# Usage: autopush "..commit-message.."
+#
+#
+# 'git push' command works with SSH Keys pair on Github
+# to activate this alias (after update) run: 'source .autopush' 
+#
+## ---------------------------------------------------------------- ##
+alias autopush='sh .autopush.sh'
