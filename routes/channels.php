@@ -20,7 +20,7 @@ Broadcast::channel('App.User.{id}', function ($user, $id) {
 
 
 Broadcast::channel('user.{toUserId}', function ($user, $toUserId) {    // $user-->logged-in user
-    // dd($user);
+    
     return $user->id == $toUserId;
 });
 

@@ -22,9 +22,10 @@ class MessageController extends Controller {
 
     public function index() {
 
-        $user_id = Auth::user()->id;
-        $data = array('user_id' => $user_id);
- 
+        $user_id = Auth::user()->id; 
+        $pusher_key = config('broadcasting.connections.pusher.key'); 
+        $data = array('user_id' => $user_id, 'pusher_key' => $pusher_key);
+        
         return view('broadcast', $data);
 
     }
@@ -47,9 +48,32 @@ class MessageController extends Controller {
 
         // want to broadcast NewMessageNotification event
         event(new NewMessageNotification($message));
-         
+
+
+
+        dump(new NewMessageNotification($message));
+        dump('message n. '. $message->id);
         // ...
 
+    }
+
+
+    public function pusher_auth($channel_name, $socket_id) {
+
+        
+        if (Auth::check()) {
+
+          echo $pusher->socket_auth($_POST["$channel_name"], $_POST["$socket_id"]);
+        
+        } else {
+
+          header('', true, 403);
+          echo "Forbidden";
+
+        }
+
+
+        return;
     }
 
 

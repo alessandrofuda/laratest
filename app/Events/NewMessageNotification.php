@@ -8,12 +8,12 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
-// use Illuminate\Contracts\Broadcasting\ShouldBroadcast;  // add in event queue
-use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;  // add in event queue
+// use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use App\Message;
 
 
-class NewMessageNotification implements ShouldBroadcastNow {
+class NewMessageNotification implements ShouldBroadcast {
 
 
     use Dispatchable, InteractsWithSockets, SerializesModels;
@@ -45,7 +45,17 @@ class NewMessageNotification implements ShouldBroadcastNow {
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('user.'.$this->message->to);  // private--> only to logged-in users
+        // dd(new PrivateChannel('user.2'));
+
+
+        dump('PrivateChannel name: '. 'user.'.$this->message->to);
+
+
+        return new PrivateChannel('user.'.$this->message->to);  // private--> only to logged-in users  user.2  // PrivateChannel()
+
+
+
+        // generated PrivateChannel name: 'private-user.2'
     }
 
 
