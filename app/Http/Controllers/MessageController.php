@@ -50,9 +50,18 @@ class MessageController extends Controller {
         event(new NewMessageNotification($message));
 
 
-        // ...
+        return redirect()->route('sending-page')->with('status', 'Message correctly broadcasted to all Auth users!');
 
     }
+
+    public function sending_page(){
+
+        return view('sending-page');
+
+    }
+
+
+
 
 
     /* public function pusher_auth($channel_name, $socket_id) {

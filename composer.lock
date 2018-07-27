@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "braintree/braintree_php",
-            "version": "3.34.0",
+            "version": "3.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/braintree/braintree_php.git",
-                "reference": "fd55c466d0d0088c67705d7ba0b3876d9767bfda"
+                "reference": "6c4388199ce379432804a5c18b88585157ef2ed7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/braintree/braintree_php/zipball/fd55c466d0d0088c67705d7ba0b3876d9767bfda",
-                "reference": "fd55c466d0d0088c67705d7ba0b3876d9767bfda",
+                "url": "https://api.github.com/repos/braintree/braintree_php/zipball/6c4388199ce379432804a5c18b88585157ef2ed7",
+                "reference": "6c4388199ce379432804a5c18b88585157ef2ed7",
                 "shasum": ""
             },
             "require": {
@@ -51,7 +51,7 @@
                 }
             ],
             "description": "Braintree PHP Client Library",
-            "time": "2018-05-21T18:14:47+00:00"
+            "time": "2018-07-26T14:37:38+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -680,16 +680,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.6.28",
+            "version": "v5.6.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "40ba2ee0e61cb4bc3c9f1dab04908e6acf06b86f"
+                "reference": "acc6b5c54ab196d3358f60acc5f55d9ebaaccc02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/40ba2ee0e61cb4bc3c9f1dab04908e6acf06b86f",
-                "reference": "40ba2ee0e61cb4bc3c9f1dab04908e6acf06b86f",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/acc6b5c54ab196d3358f60acc5f55d9ebaaccc02",
+                "reference": "acc6b5c54ab196d3358f60acc5f55d9ebaaccc02",
                 "shasum": ""
             },
             "require": {
@@ -815,7 +815,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2018-07-17T14:15:36+00:00"
+            "time": "2018-07-26T16:01:26+00:00"
         },
         {
             "name": "laravel/tinker",

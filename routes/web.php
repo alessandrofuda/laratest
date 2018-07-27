@@ -50,7 +50,9 @@ Route::get('/', function () {
 // https://code.tutsplus.com/tutorials/how-laravel-broadcasting-works--cms-30500
 Route::get('message/index', 'MessageController@index');
 Route::get('message/send', 'MessageController@send');
-// Route::get('pusher_auth?channel_name={ch_name}&socket_id={sock_id}', 'MessageController@pusher_auth');
+Route::get('sending-page', ['as'=>'sending-page', 'uses' => 'MessageController@sending_page']);
+
+
 
 
 

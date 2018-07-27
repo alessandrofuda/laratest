@@ -48,7 +48,7 @@ class NewMessageNotification implements ShouldBroadcastNow {
         // dd(new PrivateChannel('user.2'));
 
 
-        dump('PrivateChannel name: '. 'user.'.$this->message->to);
+        // dump('PrivateChannel name: '. 'user.'.$this->message->to);
 
 
         return new PrivateChannel('user.'.$this->message->to);  // private--> only to logged-in users  user.2  // PrivateChannel()
