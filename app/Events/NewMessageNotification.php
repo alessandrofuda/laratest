@@ -8,12 +8,12 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;  // add in event queue
-// use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
+// use Illuminate\Contracts\Broadcasting\ShouldBroadcast;  // add in event queue
+use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use App\Message;
 
 
-class NewMessageNotification implements ShouldBroadcast {
+class NewMessageNotification implements ShouldBroadcastNow {
 
 
     use Dispatchable, InteractsWithSockets, SerializesModels;

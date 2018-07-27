@@ -50,15 +50,12 @@ class MessageController extends Controller {
         event(new NewMessageNotification($message));
 
 
-
-        dump(new NewMessageNotification($message));
-        dump('message n. '. $message->id);
         // ...
 
     }
 
 
-    public function pusher_auth($channel_name, $socket_id) {
+    /* public function pusher_auth($channel_name, $socket_id) {
 
         
         if (Auth::check()) {
@@ -74,7 +71,7 @@ class MessageController extends Controller {
 
 
         return;
-    }
+    } */
 
 
 }

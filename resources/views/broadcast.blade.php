@@ -51,7 +51,7 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
  
-                                <ul class="dropdown-menu" role="menu" style="display: block;">
+                                <ul class="dropdown-menu" role="menu" style="display: block;" >
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -80,34 +80,36 @@
  
     <!-- receive notifications -->
     <script>window.module = {};</script>
-    <!--script src="{{-- asset('js/echo.js') --}}"></script-->
-
-    <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
+    <script src="{{ asset('js/echo.js') }}"></script>
+ 
+    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
          
-        <!--script>
-            console.log('ok');
+        <script>
           Pusher.logToConsole = true;
          
           window.Echo = new Echo({
             broadcaster: 'pusher',
-            key: '289412e83c8d3254342a', 
+            key: '{{ $pusher_key }}',
             cluster: 'eu',
             encrypted: true,
             logToConsole: true
           });
          
-         //console.log(Echo);
-
-
-          Echo.private('user.{{-- $user_id --}}')
+          Echo.private('user.{{ $user_id }}')
           .listen('NewMessageNotification', (e) => {
-                console.log('testtt');
               alert(e.message.message);
           });
-        </script-->
-        
+        </script>
+    <!-- receive notifications -->
+ 
 
-        <script>
+
+
+
+
+    <!-- receive notifications -->
+        <!--script>
+            // funzionante su public channel
             // Enable pusher logging - don't include this in production
             Pusher.logToConsole = true;
 
@@ -117,23 +119,23 @@
 
 
 
-            var pusher = new Pusher('{{ $pusher_key }}', {
+            var pusher = new Pusher('{{-- $pusher_key --}}', {
                 //authEndpoint: '{{-- asset('pusher_auth') --}}?channel_name=private-user.{{-- $user_id --}}&socket_id=??????????',
                 auth: {
                     headers: {
-                        'X-CSRF-Token': "{{ csrf_token() }}"
+                        'X-CSRF-Token': "{{-- csrf_token() --}}"
                     }
                 },
                 cluster: 'eu',
                 encrypted: true
             }); 
 
-            var channel = pusher.subscribe('private-user.{{ $user_id }}');   // 'my-channel'
+            var channel = pusher.subscribe('private-user.{{-- $user_id --}}');   // 'my-channel'
             channel.bind('App\\Events\\NewMessageNotification', function(data) {    // 'my-event'
                 // console.log(data);
                 alert(JSON.stringify(data.message));
             });
-        </script>
+        </script-->
     <!-- receive notifications -->
 
 
