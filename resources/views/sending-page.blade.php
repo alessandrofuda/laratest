@@ -18,10 +18,10 @@
   </head>
 
   <body>
-  	<div class="container">
+  	<div class="container" style="margin-top: 5%;">
   		<div class="row text-center">
   			<div class="col">
-		    	<div class="title">Sending page</div>
+		    	<div class="title" style="margin: 3% auto;">Sending page</div>
 		    </div>
 		</div>
 
@@ -47,7 +47,7 @@
 
 		<div class="row text-center">
 			<div class="col">
-				<a class="btn btn-outline-primary" href="{{url('message/send')}}">Send request</a>
+				<a class="btn btn-outline-primary" href="{{url('message/send')}}">Send Broadcast Notification</a>
 			</div>
 		</div>
 	</div>
