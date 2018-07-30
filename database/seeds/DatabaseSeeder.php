@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         //});
 
         
+        /*
         $authors = factory(App\Author::class, 5)->create();
 
         $authors->each(function ($author) {
@@ -34,7 +35,14 @@ class DatabaseSeeder extends Seeder
                 ->saveMany(
                     factory(App\Post::class, rand(20,30))->make()
                 );
-    });
+        });
+        */
+
+
+
+
+        $this->call(ArticlesTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
 
 
     }
