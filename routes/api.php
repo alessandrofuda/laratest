@@ -28,7 +28,7 @@ Route::get('/user', function (Request $request) {
 //Route::prefix('v1')->group(function(){
 
 
-
+/* 
 	Route::get('articles', function(){
 		return Article::all();
 	});
@@ -59,6 +59,17 @@ Route::get('/user', function (Request $request) {
 
 		return 204;
 	});
+*/
+
+
+	Route::get('articles', 'ArticleController@index');
+	Route::get('article/{article}', 'ArticleController@show');
+	Route::post('article', 'ArticleController@store');
+	Route::put('article/{article}', 'ArticleController@update');
+	Route::delete('article/{article}', 'ArticleController@delete');
+
+
+
 
 
 // });
