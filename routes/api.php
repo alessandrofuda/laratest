@@ -22,44 +22,15 @@ Route::get('/user', function (Request $request) {
 
 
 // 30/07/2018
+//Route::middleware('auth:api')
+//     ->get('/user', function (Request $request) {
+//        return $request->user();
+// 	 });
+
 
 //Route::group(['prefix' => 'v1'], function(){
 
 //Route::prefix('v1')->group(function(){
-
-
-/* 
-	Route::get('articles', function(){
-		return Article::all();
-	});
-
-
-	Route::get('article/{id}', function($id){
-		return Article::find($id);
-	});
-
-
-	Route::post('article', function(Request $request){
-		return Article::create($request->all());
-	});
-
-
-	Route::put('article/{id}', function(Request $request, $id){
-
-		$article = Article::findOrFail($id);
-		$article->update($request->all());
-
-		return $article;
-	});
-
-
-	Route::delete('article/{id}', function($id){
-		$article = Article::find($id);
-		$article->delete();
-
-		return 204;
-	});
-*/
 
 	// https://www.toptal.com/laravel/restful-laravel-api-tutorial 
 
@@ -69,7 +40,9 @@ Route::get('/user', function (Request $request) {
 	Route::put('article/{article}', 'ArticleController@update');
 	Route::delete('article/{article}', 'ArticleController@delete');
 
-
+	Route::post('register', 'Auth\RegisterController@register');
+	Route::post('login', 'Auth\LoginController@login');
+	Route::post('logout', 'Auth\LoginController@logout');
 
 
 

@@ -41,4 +41,18 @@ class User extends Authenticatable
     public function post(){
         return $this->hasMany('App\Post');
     }
+
+
+    // 31/07/2018
+    public function generateToken() {
+
+        $this->api_token = str_random(60);
+        $this->save();
+
+        return $this->api_token;
+
+    }
+
+
+
 }
