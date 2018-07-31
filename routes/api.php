@@ -61,6 +61,7 @@ Route::get('/user', function (Request $request) {
 	});
 */
 
+	// https://www.toptal.com/laravel/restful-laravel-api-tutorial 
 
 	Route::get('articles', 'ArticleController@index');
 	Route::get('article/{article}', 'ArticleController@show');
