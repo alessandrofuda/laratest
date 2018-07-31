@@ -18,7 +18,7 @@ class ArticleController extends Controller
 
  
 
-    public function show(Article $article)
+    public function show(Article $article)  
     {
         // return Article::find($id);
         return $article;
