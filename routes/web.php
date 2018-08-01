@@ -56,6 +56,17 @@ Route::get('sending-page', ['as'=>'sending-page', 'uses' => 'MessageController@s
 
 
 
+Route::get('/', function(){
+    return view('index');
+});
+
+
+
+
+
+
+
+/*
 Route::get('post/{id}', function ($id) {
 	$post = App\Post::findOrFail($id);  
 	return view('blog.post')->with('post', $post);
@@ -98,3 +109,4 @@ Route::post('braintree/webhooks', '\Laravel\Cashier\Http\Controllers\WebhookCont
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+*/

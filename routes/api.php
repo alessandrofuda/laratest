@@ -49,3 +49,9 @@ Route::group(['middleware' => 'auth:api'], function() {
 
 
 // });
+
+
+// API Cruds
+Route::resource('/cruds', 'CrudsController', [
+											'except' => ['edit', 'show', 'store']
+											]);
