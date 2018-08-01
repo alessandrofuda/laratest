@@ -20,6 +20,8 @@ Route::get('/user', function (Request $request) {
 
 
 
+// https://www.toptal.com/laravel/restful-laravel-api-tutorial
+
 
 // 30/07/2018
 //Route::middleware('auth:api')
@@ -28,17 +30,17 @@ Route::get('/user', function (Request $request) {
 // 	 });
 
 
+
 //Route::group(['prefix' => 'v1'], function(){
-
 //Route::prefix('v1')->group(function(){
-
-	// https://www.toptal.com/laravel/restful-laravel-api-tutorial 
-
+ 
+Route::group(['middleware' => 'auth:api'], function() {
 	Route::get('articles', 'ArticleController@index');
 	Route::get('article/{article}', 'ArticleController@show');
 	Route::post('article', 'ArticleController@store');
 	Route::put('article/{article}', 'ArticleController@update');
 	Route::delete('article/{article}', 'ArticleController@delete');
+});
 
 	Route::post('register', 'Auth\RegisterController@register');
 	Route::post('login', 'Auth\LoginController@login');
