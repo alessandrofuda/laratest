@@ -16,13 +16,9 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('app-component', require('./components/App.vue'));
-Vue.component('crud-component', require('./components/CrudComponent.vue'));
+// Vue.component('app-component', require('./components/App.vue'));
+// Vue.component('crud-component', require('./components/CrudComponent.vue'));
 
 const app = new Vue({
-    el: '#app',
-    data: {
-		message: 'Hello Vue!'
-	}
-
+    el: '#app'
 });

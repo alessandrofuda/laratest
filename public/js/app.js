@@ -13972,53 +13972,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(3)
-/* script */
-var __vue_script__ = __webpack_require__(46)
-/* template */
-var __vue_template__ = __webpack_require__(47)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/CrudComponent.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-403cb738", Component.options)
-  } else {
-    hotAPI.reload("data-v-403cb738", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
+/* 12 */,
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14048,15 +14002,11 @@ window.Vue = __webpack_require__(38);
  */
 
 Vue.component('example-component', __webpack_require__(41));
-Vue.component('app-component', __webpack_require__(44));
-Vue.component('crud-component', __webpack_require__(12));
+// Vue.component('app-component', require('./components/App.vue'));
+// Vue.component('crud-component', require('./components/CrudComponent.vue'));
 
 var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-
+  el: '#app'
 });
 
 /***/ }),
@@ -47397,11 +47347,62 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        console.log('Component mounted.');
-    }
+        console.log('Component mounted...');
+    } /*,
+      data: function() {
+        return {
+            totale: 100,
+            persone: 1
+        }
+      },
+      computed: {
+        diviso: function () {
+            return this.totale / this.persone;
+        }
+      },
+      methods: {
+        addPersona: function(){
+            return this.persone = this.persone + 1;
+        },
+        removePersona: function(){
+            if( this.persone > 1 )
+                return this.persone = this.persone - 1;
+        }
+      }
+      */
+
 });
 
 /***/ }),
@@ -47424,13 +47425,87 @@ var staticRenderFns = [
         _c("div", { staticClass: "col-md-8" }, [
           _c("div", { staticClass: "card card-default" }, [
             _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
+              _vm._v("Example Component - Calculator")
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "diviso" } }, [
+                  _vm._v("Conto per persona")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "input-group input-group-lg" }, [
+                  _c("span", { staticClass: "input-group-addon" }, [
+                    _vm._v("€")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "form-control text-right",
+                    attrs: { name: "diviso", type: "number", disabled: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "totale" } }, [
+                  _vm._v("Conto totale")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "input-group" }, [
+                  _c("span", { staticClass: "input-group-addon" }, [
+                    _vm._v("€")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "form-control text-right",
+                    attrs: {
+                      name: "totale",
+                      type: "number",
+                      min: "0",
+                      step: "0.01"
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "persone" } }, [_vm._v("Persone")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "input-group" }, [
+                  _c("span", { staticClass: "input-group-btn" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-secondary",
+                        attrs: { type: "button" }
+                      },
+                      [_vm._v("-")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "form-control text-center",
+                    attrs: {
+                      name: "persone",
+                      type: "number",
+                      min: "1",
+                      step: "1",
+                      value: "1"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "input-group-btn" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-secondary",
+                        attrs: { type: "button" }
+                      },
+                      [_vm._v("+")]
+                    )
+                  ])
+                ])
+              ])
             ])
           ])
         ])
@@ -47448,321 +47523,11 @@ if (false) {
 }
 
 /***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(3)
-/* script */
-var __vue_script__ = __webpack_require__(45)
-/* template */
-var __vue_template__ = __webpack_require__(48)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/App.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8142f38c", Component.options)
-  } else {
-    hotAPI.reload("data-v-8142f38c", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 45 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CrudComponent_vue__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CrudComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__CrudComponent_vue__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-function Crud(_ref) {
-  var id = _ref.id,
-      color = _ref.color,
-      name = _ref.name;
-
-  this.id = id;
-  this.color = color;
-  this.name = name;
-}
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      cruds: [],
-      mute: false
-    };
-  },
-
-  methods: {
-    create: function create() {
-      var _this = this;
-
-      this.mute = true;
-      window.axios.get('/api/cruds/create').then(function (_ref2) {
-        var data = _ref2.data;
-
-        _this.cruds.push(new Crud(data));
-        _this.mute = false;
-      });
-    },
-    read: function read() {
-      var _this2 = this;
-
-      this.mute = true;
-      window.axios.get('/api/cruds').then(function (_ref3) {
-        var data = _ref3.data;
-
-        // console.log(data)
-        data.forEach(function (crud) {
-          _this2.cruds.push(new Crud(crud));
-        });
-        _this2.mute = false;
-      });
-    },
-    update: function update(id, color) {
-      var _this3 = this;
-
-      this.mute = true;
-      window.axios.put('/api/cruds/' + id, { color: color }).then(function () {
-        // Once AJAX resolves we can update the Crud with the new color
-        _this3.cruds.find(function (crud) {
-          return crud.id === id;
-        }).color = color;
-        _this3.mute = false;
-      });
-    },
-    created: function created() {
-      this.read();
-    },
-    del: function del(id) {
-      var _this4 = this;
-
-      this.mute = true;
-      window.axios.delete('/api/cruds/' + id).then(function () {
-        var index = _this4.cruds.findIndex(function (crud) {
-          return crud.id === id;
-        });
-        _this4.cruds.splice(index, 1);
-        _this4.mute = false;
-      });
-    }
-  },
-  components: {
-    CrudComponent: __WEBPACK_IMPORTED_MODULE_0__CrudComponent_vue___default.a
-  },
-  watch: {
-    mute: function mute(val) {
-      document.getElementById('mute').className = val ? "on" : "";
-    }
-  }
-});
-
-/***/ }),
-/* 46 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  computed: {
-    image: function image() {
-      return '/images/' + this.color + '.png';
-    }
-  },
-  methods: {
-    update: function update(val) {
-      this.$emit('update', this.id, val.target.selectedOptions[0].value);
-    },
-    del: function del() {
-      this.$emit('delete', this.id);
-    }
-  },
-  props: ['id', 'color', 'name'],
-  filters: {
-    properCase: function properCase(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-  }
-});
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "crud" }, [
-    _c("div", { staticClass: "col-1" }, [
-      _c("img", { attrs: { src: _vm.image } })
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "col-2" }, [
-      _c("h3", [_vm._v("Name: " + _vm._s(_vm._f("properCase")(_vm.name)))]),
-      _vm._v(" "),
-      _c(
-        "select",
-        { on: { change: _vm.update } },
-        _vm._l(["red", "green"], function(col) {
-          return _c(
-            "option",
-            {
-              key: col,
-              domProps: {
-                value: col,
-                selected: col === _vm.color ? "selected" : ""
-              }
-            },
-            [_vm._v(_vm._s(_vm._f("properCase")(col)))]
-          )
-        })
-      ),
-      _vm._v(" "),
-      _c("button", { on: { click: _vm.del } }, [_vm._v("Delete")])
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-403cb738", module.exports)
-  }
-}
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { attrs: { id: "app" } },
-    [
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._l(_vm.cruds, function(crud) {
-        return _c(
-          "crud-component",
-          _vm._b(
-            { key: crud.id, on: { update: _vm.update, delete: _vm.del } },
-            "crud-component",
-            crud,
-            false
-          )
-        )
-      }),
-      _vm._v(" "),
-      _c("div", [
-        _c(
-          "button",
-          {
-            on: {
-              click: function($event) {
-                _vm.create()
-              }
-            }
-          },
-          [_vm._v("Add")]
-        )
-      ])
-    ],
-    2
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "heading" }, [_c("h1", [_vm._v("Cruds")])])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-8142f38c", module.exports)
-  }
-}
-
-/***/ }),
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
 /* 49 */
 /***/ (function(module, exports) {
 

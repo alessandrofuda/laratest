@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Cruds</title>
+    <link rel="stylesheet" href="css/app.css">
     <style>
       html, body {
         margin: 0;
@@ -30,22 +31,23 @@
 
   <body>
     <div id="mute"></div>
+
     <div id="app">
-      <div><p>@{{ message }}</p></div>
+      <!--div><p>{{-- message --}}</p></div-->
       
       <div class="test">
         <example-component></example-component>
       </div>
       
 
-      <div>
+      <!--div>
         <app-component></app-component>
-      </div>
+      </div-->
       
 
-      <div>
+      <!--div>
         <crud-component></crud-component>
-      </div>
+      </div-->
 
 
     </div>
