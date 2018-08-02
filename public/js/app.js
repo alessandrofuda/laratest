@@ -47384,12 +47384,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        console.log('Component mounted...');
+        console.log('Component mounted..');
     },
     data: function data() {
         return {
-            totale: 0 .toFixed(2),
-            persone: 2
+            totale: 100.01.toFixed(2),
+            persone: 1
         };
     },
     computed: {
@@ -47429,7 +47429,7 @@ var render = function() {
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "form-group" }, [
               _c("label", { attrs: { for: "diviso" } }, [
-                _vm._v("Conto per persona")
+                _vm._v("Euro a persona")
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "input-group input-group-lg" }, [
@@ -47444,7 +47444,7 @@ var render = function() {
                       expression: "diviso"
                     }
                   ],
-                  staticClass: "form-control text-center",
+                  staticClass: "form-control text-left diviso",
                   attrs: { name: "diviso", disabled: "" },
                   domProps: { value: _vm.diviso },
                   on: {
@@ -47477,6 +47477,7 @@ var render = function() {
                     }
                   ],
                   staticClass: "form-control text-center",
+                  staticStyle: { "padding-left": "5%" },
                   attrs: {
                     name: "totale",
                     type: "number",
@@ -47497,7 +47498,9 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "persone" } }, [_vm._v("Persone")]),
+              _c("label", { attrs: { for: "persone" } }, [
+                _vm._v("Quante persone?")
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "input-group" }, [
                 _c("span", { staticClass: "input-group-btn" }, [

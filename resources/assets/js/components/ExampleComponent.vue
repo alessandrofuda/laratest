@@ -11,10 +11,10 @@
                     <div class="card-body">
 
                         <div class="form-group">
-                            <label for="diviso">Conto per persona</label>
+                            <label for="diviso">Euro a persona</label>
                             <div class="input-group input-group-lg">
                                 <span class="input-group-addon">€</span>
-                                <input v-model="diviso" name="diviso" class="form-control text-center" disabled><!-- type="number" -->
+                                <input v-model="diviso" name="diviso" class="form-control text-left diviso" disabled><!-- type="number" -->
                             </div>
                         </div>
 
@@ -22,12 +22,12 @@
                             <label for="totale">Conto totale</label>
                             <div class="input-group">
                                 <span class="input-group-addon">€</span>
-                                <input v-model="totale" name="totale" class="form-control text-center" type="number" min="0" step="0.01"><!--  -->
+                                <input v-model="totale" name="totale" class="form-control text-center" type="number" min="0" step="0.01" style="padding-left: 5%;"><!--  -->
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="persone">Persone</label>
+                            <label for="persone">Quante persone?</label>
                             <div class="input-group">
                                 <span class="input-group-btn">
                                     <button v-on:click="removePersona()" class="btn btn-secondary left" type="button">-</button><!--  -->
@@ -52,16 +52,16 @@
 <script>
     export default {
         mounted: function() { 
-            console.log('Component mounted...')
+            console.log('Component mounted..')
         },
         data: function() {
             return {
-                totale: (0).toFixed(2),
-                persone: 2
+                totale: (100.01).toFixed(2), 
+                persone: 1
             }
         },
         computed: {
-            diviso: function () {
+            diviso: function() {
                 // return Number(( this.totale / this.persone ).toFixed(2)); // round to 2 decimal
                 return ( this.totale / this.persone ).toFixed(2); // round to 2 decimal
             }

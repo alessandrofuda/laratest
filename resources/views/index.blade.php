@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Cruds</title>
+    <title>Realtime Calculator with Vuejs+Laravel</title>
     <link rel="stylesheet" href="css/app.css">
     <style>
       .container { margin-top: 3%; }
@@ -14,10 +14,12 @@
       .tit { text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff; display: block; letter-spacing: 2px; font-size: 125%; margin-top: 1%; }
       label { margin-left: 30px; }
       input.form-control { max-width: 430px; }
+      #app input.diviso { border:none; background-color: inherit; }
       #app input { border-radius: 0; }
       .btn.btn-secondary.left { border-radius: 10px 0px 0px 10px; }
       .btn.btn-secondary.right { border-radius: 0px 10px 10px 0px; }
       #app .reset button { font-size: 70%; letter-spacing: 2px; margin-top: 8%; }
+
     </style>
   </head>
 
