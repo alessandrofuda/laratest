@@ -9,23 +9,14 @@
     <title>Cruds</title>
     <link rel="stylesheet" href="css/app.css">
     <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #d1d1d1;
-      }
-      #mute {
-        position: absolute;
-      }
-      #mute.on {
-        opacity: 0.7;
-        z-index: 1000;
-        background: white;
-        height: 100%;
-        width: 100%;
-      }
+      .container { margin-top: 3%; }
+      .input-group-addon { font-size: 170%; margin-right: 3%; }
+      .tit { text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff; display: block; letter-spacing: 2px; font-size: 125%; margin-top: 1%; }
+      label { margin-left: 30px; }
+      input.form-control { max-width: 430px; }
+      #app input { border-radius: 0; }
+      .btn.btn-secondary.left { border-radius: 10px 0px 0px 10px; }
+      .btn.btn-secondary.right { border-radius: 0px 10px 10px 0px; }
     </style>
   </head>
 
