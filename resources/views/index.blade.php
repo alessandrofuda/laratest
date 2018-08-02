@@ -17,6 +17,7 @@
       #app input { border-radius: 0; }
       .btn.btn-secondary.left { border-radius: 10px 0px 0px 10px; }
       .btn.btn-secondary.right { border-radius: 0px 10px 10px 0px; }
+      #app .reset button { font-size: 70%; letter-spacing: 2px; margin-top: 8%; }
     </style>
   </head>
 

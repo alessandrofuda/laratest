@@ -47378,6 +47378,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -47385,13 +47388,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data: function data() {
         return {
-            totale: 100,
-            persone: 1
+            totale: 0 .toFixed(2),
+            persone: 2
         };
     },
     computed: {
         diviso: function diviso() {
-            return Number((this.totale / this.persone).toFixed(2)); // round to 2 decimal
+            // return Number(( this.totale / this.persone ).toFixed(2)); // round to 2 decimal
+            return (this.totale / this.persone).toFixed(2); // round to 2 decimal
         }
     },
     methods: {
@@ -47400,6 +47404,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         removePersona: function removePersona() {
             if (this.persone > 1) return this.persone = this.persone - 1;
+        },
+        resetForm: function resetForm() {
+
+            this.totale = 0, this.persone = 2;
         }
     }
 });
@@ -47518,7 +47526,7 @@ var render = function() {
                     }
                   ],
                   staticClass: "form-control text-center",
-                  attrs: { name: "persone", min: "1", step: "1" },
+                  attrs: { name: "persone", min: "1", step: "1", disabled: "" },
                   domProps: { value: _vm.persone },
                   on: {
                     input: function($event) {
@@ -47546,6 +47554,23 @@ var render = function() {
                   )
                 ])
               ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "reset text-right" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.resetForm()
+                    }
+                  }
+                },
+                [_vm._v("RESET")]
+              )
             ])
           ])
         ])

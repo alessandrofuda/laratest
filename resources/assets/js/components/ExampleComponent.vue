@@ -32,11 +32,14 @@
                                 <span class="input-group-btn">
                                     <button v-on:click="removePersona()" class="btn btn-secondary left" type="button">-</button><!--  -->
                                 </span>
-                                <input v-model="persone" name="persone" class="form-control text-center" min="1" step="1"><!-- value="1" type="number" -->
+                                <input v-model="persone" name="persone" class="form-control text-center" min="1" step="1" disabled><!-- value="1" type="number" -->
                                 <span class="input-group-btn">
                                     <button v-on:click="addPersona()" class="btn btn-secondary right" type="button">+</button><!--  -->
                                 </span>
                             </div>
+                        </div>
+                        <div class="reset text-right">
+                            <button v-on:click.prevent="resetForm()" type="button" class="btn btn-outline-secondary">RESET</button>
                         </div>
 
                     </div>
@@ -53,13 +56,14 @@
         },
         data: function() {
             return {
-                totale: 100,
-                persone: 1
+                totale: (0).toFixed(2),
+                persone: 2
             }
         },
         computed: {
             diviso: function () {
-                return Number(( this.totale / this.persone ).toFixed(2)); // round to 2 decimal
+                // return Number(( this.totale / this.persone ).toFixed(2)); // round to 2 decimal
+                return ( this.totale / this.persone ).toFixed(2); // round to 2 decimal
             }
         },
         methods: {
@@ -69,6 +73,11 @@
             removePersona: function(){
                 if( this.persone > 1 )
                     return this.persone = this.persone - 1;
+            },
+            resetForm: function(){
+                
+                this.totale = 0,
+                this.persone = 2
             }
         }
     }
