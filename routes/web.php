@@ -56,6 +56,7 @@ Route::get('sending-page', ['as'=>'sending-page', 'uses' => 'MessageController@s
 
 
 
+// Realtime calculator with Vuejs
 Route::get('/', function(){
     return view('index');
 });
