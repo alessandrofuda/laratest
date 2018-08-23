@@ -17,6 +17,16 @@
 
 
 
+
+// VUE SPA exercise
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+
+
+
+
+
+
+
 //  API RESOURCES
 use App\User;
 use App\Http\Resources\User as UserResource;
