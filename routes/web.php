@@ -20,7 +20,7 @@
 
 // VUE SPA exercise
 Route::get('/{any}', 'SpaController@index')->where('any', '.*');
-
+ 
 
 
 
