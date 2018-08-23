@@ -17,6 +17,32 @@
 
 
 
+//  API RESOURCES
+use App\User;
+use App\Http\Resources\User as UserResource;
+
+Route::get('/user', function () {
+
+    $collection = User::all(); //User::whereIn('id',[1,2])->get();  // User::find(1);
+    // dd($collection);
+    // dd(new UserResource($collection));
+    return UserResource::collection($collection);  // new
+});
+
+
+
+use App\Http\Resources\UserCollection;
+
+Route::get('/user-coll', function () {
+
+    $collection = User::all(); 
+    return new UserCollection($collection); 
+});
+
+
+
+
+
 /**
 * /posts --> restituisce la lista di tutti i posts in db
 * Post::with('author')  --> recupera tutti i post con le info di ogni author (dall'altra tabella 
