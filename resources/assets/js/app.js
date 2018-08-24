@@ -43,6 +43,7 @@ import Home from './views/Home'
 import Calculator from './views/Calculator'
 
 
+
 const router = new VueRouter({
     mode: 'history',
     routes: [

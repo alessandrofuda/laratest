@@ -14,9 +14,17 @@ use App\Article;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+
+
+// VUE SPA exercise
+Route::get('/users', function () {
+    return factory('App\User', 10)->make();
+});
+
+
+//Route::get('/user', function (Request $request) {
+//    return $request->user();
+//})->middleware('auth:api');
 
 
 

@@ -204,7 +204,7 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
-module.exports = __webpack_require__(18);
+module.exports = __webpack_require__(24);
 
 
 /***/ }),
@@ -14588,13 +14588,13 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(24)
+  __webpack_require__(17)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(23)
+var __vue_script__ = __webpack_require__(22)
 /* template */
-var __vue_template__ = __webpack_require__(17)
+var __vue_template__ = __webpack_require__(23)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -14636,201 +14636,44 @@ module.exports = Component.exports
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "card card-default" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "diviso" } }, [
-                _vm._v("Euro a persona")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "input-group input-group-lg" }, [
-                _c("span", { staticClass: "input-group-addon" }, [_vm._v("€")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.diviso,
-                      expression: "diviso"
-                    }
-                  ],
-                  staticClass: "form-control text-left diviso",
-                  attrs: { name: "diviso", disabled: "" },
-                  domProps: { value: _vm.diviso },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.diviso = $event.target.value
-                    }
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "totale" } }, [
-                _vm._v("Conto totale")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "input-group" }, [
-                _c("span", { staticClass: "input-group-addon" }, [_vm._v("€")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.totale,
-                      expression: "totale"
-                    }
-                  ],
-                  staticClass: "form-control text-center",
-                  staticStyle: { "padding-left": "5%" },
-                  attrs: {
-                    name: "totale",
-                    type: "number",
-                    min: "0",
-                    step: "0.01"
-                  },
-                  domProps: { value: _vm.totale },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.totale = $event.target.value
-                    }
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "persone" } }, [
-                _vm._v("Quante persone?")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "input-group" }, [
-                _c("span", { staticClass: "input-group-btn" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-secondary left",
-                      attrs: { type: "button" },
-                      on: {
-                        click: function($event) {
-                          _vm.removePersona()
-                        }
-                      }
-                    },
-                    [_vm._v("-")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.persone,
-                      expression: "persone"
-                    }
-                  ],
-                  staticClass: "form-control text-center",
-                  attrs: { name: "persone", min: "1", step: "1", disabled: "" },
-                  domProps: { value: _vm.persone },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.persone = $event.target.value
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "input-group-btn" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-secondary right",
-                      attrs: { type: "button" },
-                      on: {
-                        click: function($event) {
-                          _vm.addPersona()
-                        }
-                      }
-                    },
-                    [_vm._v("+")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "reset text-right" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-outline-secondary",
-                  attrs: { type: "button" },
-                  on: {
-                    click: function($event) {
-                      $event.preventDefault()
-                      _vm.resetForm()
-                    }
-                  }
-                },
-                [_vm._v("RESET")]
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header text-center" }, [
-      _c("span", {}, [_vm._v("Vuejs Component Example")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "tit" }, [_vm._v("Real Time Calculator")])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-71d1e815", module.exports)
-  }
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(18);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(20)("4e39d83f", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-71d1e815\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Calculator.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-71d1e815\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Calculator.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
 }
 
 /***/ }),
 /* 18 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+exports = module.exports = __webpack_require__(19)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.container { margin-top: 3%;\n}\n.input-group-addon { font-size: 170%; margin-right: 3%;\n}\n.tit { text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff; display: block; letter-spacing: 2px; font-size: 125%; margin-top: 1%;\n}\nlabel { margin-left: 30px;\n}\ninput.form-control { max-width: 430px;\n}\n#app input.diviso { border:none; background-color: inherit;\n}\n#app input { border-radius: 0;\n}\n.btn.btn-secondary.left { border-radius: 10px 0px 0px 10px;\n}\n.btn.btn-secondary.right { border-radius: 0px 10px 10px 0px;\n}\n#app .reset button { font-size: 70%; letter-spacing: 2px; margin-top: 8%;\n}\n\n", ""]);
+
+// exports
+
 
 /***/ }),
-/* 19 */,
-/* 20 */
+/* 19 */
 /***/ (function(module, exports) {
 
 /*
@@ -14912,151 +14755,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 21 */,
-/* 22 */,
-/* 23 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted..');
-    },
-    data: function data() {
-        return {
-            totale: 100.01.toFixed(2),
-            persone: 1
-        };
-    },
-    computed: {
-        diviso: function diviso() {
-            // return Number(( this.totale / this.persone ).toFixed(2)); // round to 2 decimal
-            return (this.totale / this.persone).toFixed(2); // round to 2 decimal
-        }
-    },
-    methods: {
-        addPersona: function addPersona() {
-            return this.persone = this.persone + 1;
-        },
-        removePersona: function removePersona() {
-            if (this.persone > 1) return this.persone = this.persone - 1;
-        },
-        resetForm: function resetForm() {
-
-            this.totale = 0, this.persone = 2;
-        }
-    }
-});
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(25);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(26)("4e39d83f", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-71d1e815\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Calculator.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-71d1e815\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Calculator.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(20)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.container { margin-top: 3%;\n}\n.input-group-addon { font-size: 170%; margin-right: 3%;\n}\n.tit { text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff; display: block; letter-spacing: 2px; font-size: 125%; margin-top: 1%;\n}\nlabel { margin-left: 30px;\n}\ninput.form-control { max-width: 430px;\n}\n#app input.diviso { border:none; background-color: inherit;\n}\n#app input { border-radius: 0;\n}\n.btn.btn-secondary.left { border-radius: 10px 0px 0px 10px;\n}\n.btn.btn-secondary.right { border-radius: 0px 10px 10px 0px;\n}\n#app .reset button { font-size: 70%; letter-spacing: 2px; margin-top: 8%;\n}\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 26 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -15075,7 +14774,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(27)
+var listToStyles = __webpack_require__(21)
 
 /*
 type StyleObject = {
@@ -15284,7 +14983,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 27 */
+/* 21 */
 /***/ (function(module, exports) {
 
 /**
@@ -15315,6 +15014,304 @@ module.exports = function listToStyles (parentId, list) {
   return styles
 }
 
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted..');
+    },
+    data: function data() {
+        return {
+            totale: 100.01.toFixed(2),
+            persone: 1
+        };
+    },
+    computed: {
+        diviso: function diviso() {
+            // return Number(( this.totale / this.persone ).toFixed(2)); // round to 2 decimal
+            return (this.totale / this.persone).toFixed(2); // round to 2 decimal
+        }
+    },
+    methods: {
+        addPersona: function addPersona() {
+            return this.persone = this.persone + 1;
+        },
+        removePersona: function removePersona() {
+            if (this.persone > 1) return this.persone = this.persone - 1;
+        },
+        resetForm: function resetForm() {
+
+            this.totale = 0, this.persone = 2;
+        }
+    }
+});
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-6" }, [
+        _c("div", { staticClass: "card card-default" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "diviso" } }, [
+                _vm._v("Euro a persona")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-group input-group-lg" }, [
+                _c("span", { staticClass: "input-group-addon" }, [_vm._v("€")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.diviso,
+                      expression: "diviso"
+                    }
+                  ],
+                  staticClass: "form-control text-left diviso",
+                  attrs: { name: "diviso", disabled: "" },
+                  domProps: { value: _vm.diviso },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.diviso = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "totale" } }, [
+                _vm._v("Conto totale")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-group" }, [
+                _c("span", { staticClass: "input-group-addon" }, [_vm._v("€")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.totale,
+                      expression: "totale"
+                    }
+                  ],
+                  staticClass: "form-control text-center",
+                  staticStyle: { "padding-left": "5%" },
+                  attrs: {
+                    name: "totale",
+                    type: "number",
+                    min: "0",
+                    step: "0.01"
+                  },
+                  domProps: { value: _vm.totale },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.totale = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "persone" } }, [
+                _vm._v("Quante persone?")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-group" }, [
+                _c("span", { staticClass: "input-group-btn" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-secondary left",
+                      attrs: { type: "button" },
+                      on: {
+                        click: function($event) {
+                          _vm.removePersona()
+                        }
+                      }
+                    },
+                    [_vm._v("-")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.persone,
+                      expression: "persone"
+                    }
+                  ],
+                  staticClass: "form-control text-center",
+                  attrs: { name: "persone", min: "1", step: "1", disabled: "" },
+                  domProps: { value: _vm.persone },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.persone = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "input-group-btn" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-secondary right",
+                      attrs: { type: "button" },
+                      on: {
+                        click: function($event) {
+                          _vm.addPersona()
+                        }
+                      }
+                    },
+                    [_vm._v("+")]
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "reset text-right" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.resetForm()
+                    }
+                  }
+                },
+                [_vm._v("RESET")]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header text-center" }, [
+      _c("span", {}, [_vm._v("Vuejs Component Example")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "tit" }, [_vm._v("Real Time Calculator")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-71d1e815", module.exports)
+  }
+}
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
