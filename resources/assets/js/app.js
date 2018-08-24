@@ -41,6 +41,7 @@ import App from './views/App'
 import Hello from './views/Hello'
 import Home from './views/Home'
 import Calculator from './views/Calculator'
+import UsersIndex from './views/UsersIndex'
 
 
 
@@ -61,6 +62,11 @@ const router = new VueRouter({
             path: '/calculator',
             name: 'calculator',
             component: Calculator,
+        },
+        {
+            path: '/users',
+            name: 'users.index',
+            component: UsersIndex,
         },
     ],
 });

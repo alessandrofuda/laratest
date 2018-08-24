@@ -17,9 +17,24 @@ use App\Article;
 
 
 // VUE SPA exercise
-Route::get('/users', function () {
-    return factory('App\User', 10)->make();
+//Route::get('/users', function () {
+
+//	if(rand(1, 10) < 6) {
+//		abort(500, 'We could NOT retrieve the users!');
+//	}
+
+//    return factory('App\User', 10)->make();
+//});
+
+
+Route::namespace('Api')->group(function () {
+    Route::get('/users', 'UsersController@index');
 });
+
+
+
+
+
 
 
 //Route::get('/user', function (Request $request) {
